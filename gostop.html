@@ -3,27 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
-<title>Ruffle Test</title>
+<title>월드컵 고스톱</title>
 
 <script>
     window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("load", (event) => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-        const container = document.getElementById("container");
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
         container.appendChild(player);
-        player.load({
-	    url: "./gostop.swf",
-	});
-	player.style.width = "100vw"; 
-	player.style.height = "100vh";
+        player.load("movie.swf");
     });
-    window.RufflePlayer.config = {
-        "autoplay": "on",
-        "unmuteOverlay": "hidden",
-    };
 </script>
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<script src="path/to/ruffle/ruffle.js"></script>
 	 
 <style>
 html, body{
@@ -39,3 +32,4 @@ html, body{
   <div id="container"></div>
 </body>
 </html>
+
