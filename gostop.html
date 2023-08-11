@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
-<title>월드컵 맞고</title>
+<title>Ruffle Test</title>
 
 <script>
     window.RufflePlayer = window.RufflePlayer || {};
@@ -13,14 +13,14 @@
         const container = document.getElementById("container");
         container.appendChild(player);
         player.load({
-			url: "./gostop.swf",
-		});
-		player.style.width = "100vw"; 
-		player.style.height = "100vh";
+	    url: "./gostop.swf",
+	});
+	player.style.width = "100vw"; 
+	player.style.height = "100vh";
     });
     window.RufflePlayer.config = {
-       "autoplay": "on",
-       "unmuteOverlay": "hidden",
+        "autoplay": "on",
+        "unmuteOverlay": "hidden",
     };
 </script>
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
