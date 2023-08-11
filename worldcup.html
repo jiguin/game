@@ -1,12 +1,17 @@
-<script>
-    window.RufflePlayer = window.RufflePlayer || {};
-
-    window.addEventListener("DOMContentLoaded", () => {
-        let ruffle = window.RufflePlayer.newest();
-        let player = ruffle.createPlayer();
-        let container = document.getElementById("container");
-        container.appendChild(player);
-        player.load("gostop.swf");
-    });
-</script>
-<script src="path/to/ruffle/ruffle.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<script src="./ruffle/ruffle.js"></script>
+</head>
+<body>
+<object type="application/x-shockwave-flash" data="./tetris.swf" width="1000" height="500">
+<param name="movie" value="./gostop.swf" />
+<param name='wmode' value='transparent' />
+<param name='allowScriptAccess' value='always' />
+</object>
+</body>
+</html>
