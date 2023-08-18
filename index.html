@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffle HTML5 Game</title>
+    <script src="path/to/ruffle.js"></script>
+</head>
+<body>
+    <div id="flash-container">
+        <!-- Embed the Flash content here -->
+        <object id="flash-content" type="application/x-shockwave-flash" data="./gostop.swf">
+            <param name="movie" value="./gostop.swf">
+            <!-- Additional parameters if needed -->
+        </object>
+    </div>
+
+    <script>
+        // Initialize Ruffle
+        const flashContainer = document.getElementById("flash-container");
+        const rufflePlayer = RufflePlayer.newest();
+        rufflePlayer.load({
+            swf: "path/to/ruffle/Player.swf", // Path to the Ruffle Player
+            polyfills: ["path/to/ruffle/external/vecmath.js"] // Optional polyfills
+        });
+        rufflePlayer.attachTo(flashContainer);
+    </script>
+</body>
+</html>
